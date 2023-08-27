@@ -8,7 +8,7 @@
 ##' @return a theme object with shorten axes
 ##' @export
 ##' @importFrom ggplot2 element_text
-##' @importFrom ggplot2 theme_minimal
+##' @importFrom ggplot2 theme_classic
 ##' @importFrom ggplot2 %+replace%
 ##' @importFrom grid arrow
 ##' @importFrom grid unit
@@ -16,7 +16,7 @@
 theme_dr <- function(xlength = 0.3, ylength=0.3, 
                     arrow = grid::arrow(length=unit(0.15, "inches"), type="closed")
                 ) {
-    theme_minimal() %+replace% theme_noaxis(
+    theme_classic() %+replace% theme_noaxis(
         axis.line.x.bottom=element_line2(id=1, xlength = xlength, arrow = arrow),
         axis.line.y.left=element_line2(id=2, ylength = ylength, arrow = arrow), 
         axis.title=element_text(hjust=0.1))
